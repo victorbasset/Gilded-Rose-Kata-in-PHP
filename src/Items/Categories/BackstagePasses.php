@@ -11,14 +11,15 @@ class BackstagePasses extends Item
      */
     protected function updateQuality()
     {
-        // Increases in Quality as it's SellIn value approaches.
+        // Increases in Quality as it's DaysRemaining value approaches.
         $this->quality += 1;
 
-        // Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less.
+        // Quality increases by 2 when there are 10 days or less.
         if ($this->daysRemaining <= 10) {
             $this->quality += 1;
         }
 
+        // Quality increases by 3 when there are 5 days or less.
         if ($this->daysRemaining <= 5) {
             $this->quality += 1;
         }

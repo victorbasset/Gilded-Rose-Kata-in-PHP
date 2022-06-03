@@ -27,7 +27,7 @@ class Item
     public int $quality;
 
     /**
-     * All items have a SellIn value which denotes the number of days we have to sell the item.
+     * All items have a DaysRemaining value which denotes the number of days we have to sell the item.
      * @var int
      */
     public int $daysRemaining;
@@ -50,7 +50,7 @@ class Item
     {
         $this->updateQuality();
 
-        // At the end of each day our system lowers SellIn values for every item.
+        // At the end of each day our system lowers DaysRemaining values for every item.
         $this->daysRemaining -= 1;
 
         // The Quality of an item is never negative.
