@@ -9,6 +9,11 @@ class Conjured extends Item
     /**
      * @inheritdoc
      */
+    public const name = 'Conjured Mana Cake';
+
+    /**
+     * @inheritdoc
+     */
     protected function updateQuality()
     {
         // "Conjured" items degrade in Quality twice as fast as normal items.

@@ -9,6 +9,10 @@ class Brie extends Item
     /**
      * @inheritdoc
      */
+    public const name = 'Aged Brie';
+    /**
+     * @inheritdoc
+     */
     protected function updateQuality()
     {
         // "Aged Brie" actually increases in Quality the older it gets.

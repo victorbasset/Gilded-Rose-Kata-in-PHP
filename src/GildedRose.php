@@ -15,7 +15,7 @@ class GildedRose
      * @return Item|mixed
      */
     public static function of($name, $quality, $daysRemaining) {
-        $class = ItemCategory::links[$name] ?? Item::class;
+        $class = ItemCategory::$links[$name] ?? Item::class;
         return new $class($quality, $daysRemaining);
     }
 }

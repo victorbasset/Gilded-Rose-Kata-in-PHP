@@ -5,6 +5,12 @@ namespace App\Items;
 class Item
 {
     /**
+     * Name of the item.
+     * @var string
+     */
+    public const name = 'normal';
+
+    /**
      * All items have a Quality value which denotes how valuable the item is.
      * @var int
      */

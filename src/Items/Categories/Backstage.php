@@ -9,6 +9,11 @@ class Backstage extends Item
     /**
      * @inheritdoc
      */
+    public const name = 'Backstage passes to a TAFKAL80ETC concert';
+
+    /**
+     * @inheritdoc
+     */
     protected function updateQuality()
     {
         // Increases in Quality as it's DaysRemaining value approaches.

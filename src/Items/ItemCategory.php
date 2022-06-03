@@ -13,10 +13,10 @@ class ItemCategory
      * Items names linked to is class.
      * @var array
      */
-    public const links = [
-        'Aged Brie' => Brie::class,
-        'Backstage passes to a TAFKAL80ETC concert' => Backstage::class,
-        'Conjured Mana Cake' => Conjured::class,
-        'Sulfuras, Hand of Ragnaros' => Sulfuras::class,
+    public static array $links = [
+        Brie::name => Brie::class,
+        Backstage::name => Backstage::class,
+        Conjured::name => Conjured::class,
+        Sulfuras::name => Sulfuras::class,
     ];
 }
