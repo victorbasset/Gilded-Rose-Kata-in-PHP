@@ -30,16 +30,16 @@ class Item
      * All items have a SellIn value which denotes the number of days we have to sell the item.
      * @var int
      */
-    public int $sellIn;
+    public int $daysRemaining;
 
     /**
      * @param $quality
-     * @param $sellIn
+     * @param $daysRemaining
      */
-    public function __construct($quality, $sellIn)
+    public function __construct($quality, $daysRemaining)
     {
         $this->quality = $quality;
-        $this->sellIn = $sellIn;
+        $this->daysRemaining = $daysRemaining;
     }
 
     /**
@@ -51,7 +51,7 @@ class Item
         $this->updateQuality();
 
         // At the end of each day our system lowers SellIn values for every item.
-        $this->sellIn -= 1;
+        $this->daysRemaining -= 1;
 
         // The Quality of an item is never negative.
         if ($this->quality <= 0) {
@@ -73,7 +73,7 @@ class Item
         $this->quality -= 1;
 
         // Once the sell by date has passed, Quality degrades twice as fast
-        if ($this->sellIn <= 0) {
+        if ($this->daysRemaining <= 0) {
             $this->quality -= 1;
         }
     }

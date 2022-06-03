@@ -14,7 +14,7 @@ class Conjured extends Item
         // "Conjured" items degrade in Quality twice as fast as normal items.
         $this->quality -= 2;
 
-        if ($this->sellIn <= 0) {
+        if ($this->daysRemaining <= 0) {
             $this->quality -= 2;
         }
     }

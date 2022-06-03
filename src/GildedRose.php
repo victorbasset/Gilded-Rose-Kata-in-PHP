@@ -7,14 +7,14 @@ use App\Items\Item;
 class GildedRose
 {
     /**
-     * Create an item with the category, quality and sellIn passed in params.
+     * Create an item with the category, quality and daysRemaining passed in params.
      * @param $name
      * @param $quality
-     * @param $sellIn
+     * @param $daysRemaining
      * @return Item|mixed
      */
-    public static function of($name, $quality, $sellIn) {
+    public static function of($name, $quality, $daysRemaining) {
         $class = Item::ITEMS_CATEGORIES[$name] ?? Item::class;
-        return new $class($quality, $sellIn);
+        return new $class($quality, $daysRemaining);
     }
 }
