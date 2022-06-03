@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Items\Item;
+use App\Items\ItemCategory;
 
 class GildedRose
 {
@@ -14,7 +15,7 @@ class GildedRose
      * @return Item|mixed
      */
     public static function of($name, $quality, $daysRemaining) {
-        $class = Item::ITEMS_CATEGORIES[$name] ?? Item::class;
+        $class = ItemCategory::links[$name] ?? Item::class;
         return new $class($quality, $daysRemaining);
     }
 }

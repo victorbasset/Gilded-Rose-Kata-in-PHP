@@ -2,24 +2,8 @@
 
 namespace App\Items;
 
-use App\Items\Categories\AgedBrie;
-use App\Items\Categories\BackstagePasses;
-use App\Items\Categories\Conjured;
-use App\Items\Categories\Sulfuras;
-
 class Item
 {
-    /**
-     * Items names linked to is class.
-     * @var array
-     */
-    public const ITEMS_CATEGORIES = [
-        'Aged Brie' => AgedBrie::class,
-        'Backstage passes to a TAFKAL80ETC concert' => BackstagePasses::class,
-        'Conjured Mana Cake' => Conjured::class,
-        'Sulfuras, Hand of Ragnaros' => Sulfuras::class,
-    ];
-
     /**
      * All items have a Quality value which denotes how valuable the item is.
      * @var int

@@ -4,7 +4,7 @@ namespace App\Items\Categories;
 
 use App\Items\Item;
 
-class AgedBrie extends Item
+class Brie extends Item
 {
     /**
      * @inheritdoc

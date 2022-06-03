@@ -4,7 +4,7 @@ namespace App\Items\Categories;
 
 use App\Items\Item;
 
-class BackstagePasses extends Item
+class Backstage extends Item
 {
     /**
      * @inheritdoc
