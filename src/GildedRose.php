@@ -9,12 +9,13 @@ class GildedRose
 {
     /**
      * Create an item with the category, quality and daysRemaining passed in params.
-     * @param $name
-     * @param $quality
-     * @param $daysRemaining
+     * @param string $name
+     * @param int $quality
+     * @param int $daysRemaining
      * @return Item|mixed
      */
-    public static function of($name, $quality, $daysRemaining) {
+    public static function of(string $name, int $quality, int $daysRemaining)
+    {
         $class = ItemCategory::$links[$name] ?? Item::class;
         return new $class($quality, $daysRemaining);
     }

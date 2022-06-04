@@ -23,10 +23,10 @@ class Item
     public int $daysRemaining;
 
     /**
-     * @param $quality
-     * @param $daysRemaining
+     * @param int $quality
+     * @param int $daysRemaining
      */
-    public function __construct($quality, $daysRemaining)
+    public function __construct(int $quality, int $daysRemaining)
     {
         $this->quality = $quality;
         $this->daysRemaining = $daysRemaining;
