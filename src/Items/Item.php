@@ -5,6 +5,18 @@ namespace App\Items;
 class Item
 {
     /**
+     * Quality minimum of an item.
+     * @var int
+     */
+    private const QUALITY_MIN = 0;
+
+    /**
+     * Quality maximum of an item.
+     * @var int
+     */
+    private const QUALITY_MAX = 50;
+
+    /**
      * Name of the item.
      * @var string
      */
@@ -44,13 +56,13 @@ class Item
         $this->daysRemaining -= 1;
 
         // The Quality of an item is never negative.
-        if ($this->quality <= 0) {
-            $this->quality = 0;
+        if ($this->quality <= self::QUALITY_MIN) {
+            $this->quality = self::QUALITY_MIN;
         }
 
         // The Quality of an item is never more than 50.
-        if ($this->quality > 50) {
-            $this->quality = 50;
+        if ($this->quality > self::QUALITY_MAX) {
+            $this->quality = self::QUALITY_MAX;
         }
     }
 
